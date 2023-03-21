@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(./tooltip.css);
+
+html{
+    background-color: #09050D;
+}
+
+/* main{
+    position: relative;
+} */
+
+.__content{
+    position: relative;
+}
+
+main::before{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    content: "";
+
+    background-image:
+    url('../../public/blur1.svg'),
+    url('../../public/blur2.svg'),
+    url('../../public/blur3.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(800px);
+    /* backdrop-filter: blur(50px); */
+    top: 0; left: 0;
+    background-position: bottom center, right, top;
+    animation: animatedBackground 20s linear infinite;
+    -moz-animation: animatedBackground 20s linear infinite;
+    -webkit-animation: animatedBackground 20s linear infinite;
+    -ms-animation: animatedBackground 20s linear infinite;
+    -o-animation: animatedBackground 20s linear infinite;
+}
+
+@keyframes animatedBackground {
+    0% { background-position: bottom center, right, top; }
+    50% { background-position: top left, left, bottom; }
+    100% { background-position: bottom center, right, top; }
+}
+@-moz-keyframes animatedBackground {
+    0% { background-position: bottom center, right, top; }
+    50% { background-position: top left, left, bottom; }
+    100% { background-position: bottom center, right, top; }
+}
+@-webkit-keyframes animatedBackground {
+    0% { background-position: bottom center, right, top; }
+    50% { background-position: top left, left, bottom; }
+    100% { background-position: bottom center, right, top; }
+}
+@-ms-keyframes animatedBackground {
+    0% { background-position: bottom center, right, top; }
+    50% { background-position: top left, left, bottom; }
+    100% { background-position: bottom center, right, top; }
+}
+@-o-keyframes animatedBackground {
+    0% { background-position: bottom center, right, top; }
+    50% { background-position: top left, left, bottom; }
+    100% { background-position: bottom center, right, top; }
+}
