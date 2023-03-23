@@ -8,10 +8,6 @@ html{
     background-color: #09050D;
 }
 
-/* main{
-    position: relative;
-} */
-
 .__content{
     position: relative;
 }
@@ -29,7 +25,6 @@ main::before{
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(800px);
-    /* backdrop-filter: blur(50px); */
     top: 0; left: 0;
     background-position: bottom center, right, top;
     animation: animatedBackground 20s linear infinite;
