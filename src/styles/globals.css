@@ -12,50 +12,88 @@ html{
     position: relative;
 }
 
-main::before{
+@media (max-width: 768px) { 
+     #svg1, #svg2, #svg3{
+        width: 80px;
+        height: 80px;
+     }
+}
+
+@keyframes animateSvg1 {
+    0% { left: 100px; top: 100px }
+    50%    { left: 200px; top: 200px; }
+    100% { left: 100px; top: 100px }
+}
+@-moz-keyframes animateSvg1 {
+    0% { left: 100px; top: 100px }
+    50%    { left: 200px; top: 200px; }
+   100% { left: 100px; top: 100px }
+}
+@-webkit-keyframes animateSvg1 {
+    0% { left: 100px; top: 100px }
+    50%    { left: 200px; top: 200px; }
+    100% { left: 100px; top: 100px }
+}
+@-ms-keyframes animateSvg1 {
+    0% { left: 100px; top: 100px }
+    50%    { left: 200px; top: 200px; }
+    100% { left: 100px; top: 100px }
+}
+@-o-keyframes animateSvg1 {
+    0% { left: 100px; top: 100px }
+    50%    { left: 200px; top: 200px; }
+    100% { left: 100px; top: 100px }
+}
+
+@keyframes animateSvg3 {
+    0% { left: 200px; top: 200px }
+    50%    { left: 100px; top: 100px; }
+    100% { left: 200px; top: 200px }
+}
+@-moz-keyframes animateSvg3 {
+    0% { left: 200px; top: 200px }
+    50%    { left: 100px; top: 100px; }
+    100% { left: 200px; top: 200px }
+}
+@-webkit-keyframes animateSvg3 {
+    0% { left: 200px; top: 200px }
+    50%    { left: 100px; top: 100px; }
+    100% { left: 200px; top: 200px }
+}
+@-ms-keyframes animateSvg3 {
+    0% { left: 200px; top: 200px }
+    50%    { left: 100px; top: 100px; }
+    100% { left: 200px; top: 200px }
+}
+@-o-keyframes animateSvg3 {
+    0% { left: 200px; top: 200px }
+    50%    { left: 100px; top: 100px; }
+    100% { left: 200px; top: 200px }
+}
+
+#svg1, #svg2, #svg3{
+    filter: blur(400px);
+    -webkit-filter: blur(400px);
+    z-index: -1;
     position: absolute;
-    height: 100vh;
-    width: 100vw;
-    content: "";
-
-    background-image:
-    url('../../public/blur1.svg'),
-    url('../../public/blur2.svg'),
-    url('../../public/blur3.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(800px);
-    top: 0; left: 0;
-    background-position: bottom center, right, top;
-    animation: animatedBackground 20s linear infinite;
-    -moz-animation: animatedBackground 20s linear infinite;
-    -webkit-animation: animatedBackground 20s linear infinite;
-    -ms-animation: animatedBackground 20s linear infinite;
-    -o-animation: animatedBackground 20s linear infinite;
 }
 
-@keyframes animatedBackground {
-    0% { background-position: bottom center, right, top; }
-    50% { background-position: top left, left, bottom; }
-    100% { background-position: bottom center, right, top; }
+#svg1{
+    left: 100px;
+    top: 100px;
+    animation: animateSvg1 10s linear infinite;
+    -moz-animation: animateSvg1 10s linear infinite;
+    -webkit-animation: animateSvg1 10s linear infinite;
+    -ms-animation: animateSvg1 10s linear infinite;
+    -o-animation: animateSvg1 10s linear infinite;
 }
-@-moz-keyframes animatedBackground {
-    0% { background-position: bottom center, right, top; }
-    50% { background-position: top left, left, bottom; }
-    100% { background-position: bottom center, right, top; }
-}
-@-webkit-keyframes animatedBackground {
-    0% { background-position: bottom center, right, top; }
-    50% { background-position: top left, left, bottom; }
-    100% { background-position: bottom center, right, top; }
-}
-@-ms-keyframes animatedBackground {
-    0% { background-position: bottom center, right, top; }
-    50% { background-position: top left, left, bottom; }
-    100% { background-position: bottom center, right, top; }
-}
-@-o-keyframes animatedBackground {
-    0% { background-position: bottom center, right, top; }
-    50% { background-position: top left, left, bottom; }
-    100% { background-position: bottom center, right, top; }
+
+#svg3{
+    left: 200px;
+    top: 200px;
+    animation: animateSvg3 10s linear infinite;
+    -moz-animation: animateSvg3 10s linear infinite;
+    -webkit-animation: animateSvg3 10s linear infinite;
+    -ms-animation: animateSvg3 10s linear infinite;
+    -o-animation: animateSvg3 10s linear infinite;
 }

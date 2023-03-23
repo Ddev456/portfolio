@@ -27,6 +27,33 @@ const Home: NextPage = () => {
       </Head>
       <main className="selection:text-slate-900 selection:bg-amber-500 flex min-h-screen flex-col items-center bg-hero_pattern font-jost">
         
+
+          <svg id="svg1" width="975" height="858" viewBox="0 0 975 858" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_f_203_926)">
+              <ellipse cx="592" cy="586" rx="129" ry="123" fill="#EFEDF45E"/>
+              </g>
+              <defs>
+              <filter id="filter0_f_203_926" x="0" y="0" width="1184" height="1172" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="231.5" result="effect1_foregroundBlur_203_926"/>
+              </filter>
+              </defs>
+          </svg>
+
+          <svg id="svg3" width="846" height="843" viewBox="0 0 846 843" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_f_203_923)">
+              <ellipse cx="637" cy="218" rx="174" ry="162" fill="#F26E0B54"/>
+              </g>
+              <defs>
+              <filter id="filter0_f_203_923" x="0" y="-407" width="1274" height="1250" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="231.5" result="effect1_foregroundBlur_203_923"/>
+              </filter>
+              </defs>
+          </svg>
+
         <ContactModal showModal={showModal} setShowModal={setShowModal}/>
         
         <div className="__content container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
