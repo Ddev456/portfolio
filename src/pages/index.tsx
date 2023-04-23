@@ -2,17 +2,16 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaReact } from "react-icons/fa";
-import { IoWarningOutline } from 'react-icons/io5'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { TooltipComponent } from "../components/Tooltip";
 import { SiTailwindcss, SiTrpc, SiPrisma, SiTypescript, SiReactquery, SiVercel, SiPostgresql } from 'react-icons/si'
-import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md'
 import { BsGit } from 'react-icons/bs'
 import { GrMysql } from 'react-icons/gr'
 import { AiFillGithub } from 'react-icons/ai'
 import Image from "next/image";
 import { ContactModal } from "~/components/ContactModal";
 import { useState } from "react";
+import carnetProject from "../assets/carnetpotager.png";
 
 const Home: NextPage = () => {
 
@@ -85,8 +84,8 @@ const Home: NextPage = () => {
         </div>
 
         
-          <div className="max-w-full mt-[-5rem] flex flex-nowrap flex-col justify-evenly sm:flex-row gap-4 md:gap-8 [&:hover>div]:opacity-50 [&:hover>div]:w-[35%]">
-            <div className="transition-all hover:!w-[60%] sm:w-[40%] hover:!opacity-100 group max-h-full">
+          <div className="max-w-full mt-[-5rem] flex flex-nowrap flex-col justify-evenly sm:flex-row gap-4 md:gap-8 [&:hover>div]:opacity-50">
+            <div className="transition-all -rotate-6 hover:!opacity-100 group max-h-full">
                 <TooltipComponent
             stack={[
             <span key={1} className="inline-block px-2 py-1
@@ -113,35 +112,17 @@ const Home: NextPage = () => {
                           <FaGithub className="text-[2rem]"/>
                     </Link>
                 </div>
-
                 <div className="flex justify-around">
-
                 </div>
-                <span className="flex items-center justify-center text-red-700 text-lg font-semibold">
-                  <IoWarningOutline className="text-red-700"/>Projet en cours de développement ..
-                </span>
               <div className="text-lg">
-                
-                {/* <Image className="ml-auto mr-auto hidden group-hover:block" alt="extrait" src="/Animation.gif" width={250} height={250} /> */}
-                
-                <p  className="group-hover:hidden">Application web de gestion du potager</p>
-              </div>
-              <div className="flex justify-around">
-                  <Link className="group inline-block px-4 py-3
-                  text-sm font-semibold text-center
-                  text-white uppercase transition
-                  duration-200 ease-in-out bg-indigo-600 
-                  rounded-md cursor-pointer
-                  hover:bg-indigo-700" href="https://carnetpotager.fr" target="_blank">
-                  <span className="flex items-center"> En savoir plus
-                    <MdOutlineKeyboardDoubleArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity text-[2rem]"/>
-                  </span>
+                  <Link href="https://carnetpotager.fr" target="_blank">
+                      <Image className="ml-auto mr-auto block" alt="extrait" src={carnetProject} width={250} height={250} />
                   </Link>
               </div>
             </div>
                 </TooltipComponent>
             </div>
-            <div className="transition-all hover:!w-[60%] sm:w-[40%] hover:!opacity-100 group">
+            <div className="transition-all rotate-3 hover:!opacity-100 group">
             <TooltipComponent 
             stack={[
           <span key={1} className="inline-block px-2 py-1
@@ -157,28 +138,17 @@ const Home: NextPage = () => {
             <div className="item flex justify-between flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20 p-4 cursor-auto min-h-[16rem]"
             >
               <div className="flex justify-between">
-                  <h3 className="text-2xl font-bold">ATable</h3>
+                  <h3 className="text-2xl font-bold">Générateur de recettes</h3>
                   <Link aria-label="Github" className="hover:opacity-100 opacity-75" href="https://github.com/Ddev456/atable" target="_blank">
                     <FaGithub className="text-[2rem]"/>
                   </Link>
               </div>
               <div className="text-lg">
-                
-                {/* <Image className="ml-auto mr-auto hidden group-hover:block" alt="extrait" src="/atable.png" width={250} height={250} /> */}
-                
-                <p className="group-hover:hidden">Générateur de recettes aléatoires</p>
+                <Link href="https://atable-pi.vercel.app" target="_blank">
+                    <Image className="ml-auto mr-auto block" alt="extrait" src="/atable.png" width={250} height={250} />
+                </Link>
               </div>
               <div className="flex justify-around">
-                  <Link className="group inline-block px-4 py-3
-                  text-sm font-semibold text-center
-                  text-white uppercase transition
-                  duration-200 ease-in-out bg-indigo-600 
-                  rounded-md cursor-pointer
-                  hover:bg-indigo-700" href="https://atable-pi.vercel.app" target="_blank">
-                  <span className="flex items-center"> En savoir plus
-                    <MdOutlineKeyboardDoubleArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity text-[2rem]"/>
-                  </span>
-                  </Link>
               </div>
             </div>
             </TooltipComponent>
